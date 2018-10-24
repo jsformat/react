@@ -22,13 +22,12 @@ class CommentInput extends Component {
         const {username,comment}  = this.state;
         if(this.props.onSubmit) {
             this.props.onSubmit({
-              username:this.state.username,
-              comment:this.state.comment,
+              username:username,
+              comment:comment,
               stamp:+new Date()
             })
         }
         this.setState({
-            username:'',
             comment:''
         })
     }
